@@ -1,404 +1,442 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FC Fulbert - Accueil</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #1e3a5f;
-            --secondary-color: #2c5aa0;
-            --accent-color: #d4af37;
-            --text-light: #ffffff;
-        }
+  <meta charset="utf-8">
+  <title>Matchs & résultats du FC Fulbert | Calendrier, scores, classement</title>
+  <meta name="description" content="Calendrier des matchs du FC Fulbert, derniers résultats, buteurs et classement du championnat.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="l2JYcRLRIvxfsJ17s4DcbCSg9W5m9NcBDps_JvjSt0I" />
+  <meta name="google-site-verification" content="l2JYcRLRIvxfsJ17s4DcbCSg9W5m9NcBDps_JvjSt0I" />
+  <meta name="google-site-verification" content="l2JYcRLRIvxfsJ17s4DcbCSg9W5m9NcBDps_JvjSt0I" />
+  
 
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-        }
+  <!-- Canonique -->
+  <link rel="canonical" href="https://samsweyyy.github.io/FC__Fulbert/matchs.html">
 
-        .hero-section {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: var(--text-light);
-            padding: 120px 0 80px;
-            position: relative;
-            overflow: hidden;
-        }
+  <!-- Open Graph / Twitter -->
+  <meta property="og:site_name" content="FC Fulbert">
+  <meta property="og:title" content="Matchs & résultats du FC Fulbert">
+  <meta property="og:description" content="Calendrier, scores, buteurs et classement du FC Fulbert.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://samsweyyy.github.io/FC__Fulbert/matchs.html">
+  <meta property="og:image" content="https://samsweyyy.github.io/FC__Fulbert/images/og-matches.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="google-site-verification" content="l2JYcRLRIvxfsJ17s4DcbCSg9W5m9NcBDps_JvjSt0I" />
 
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/></svg>') repeat;
-            background-size: 100px 100px;
-        }
+  <!-- Favicons -->
+  <link rel="icon" href="/FC__Fulbert/favicon.ico">
 
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
+  <!-- Perf -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
-        .navbar-custom {
-            background: rgba(30, 58, 95, 0.95) !important;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
+  <!-- CSS libs -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
 
-        .navbar-brand {
-            font-weight: bold;
-            color: var(--accent-color) !important;
-            font-size: 1.5rem;
-        }
+  <style>
+    :root{--primary-color:#1e3a5f;--secondary-color:#2c5aa0;--accent-color:#d4af37;--text-light:#fff;--success-color:#28a745;--danger-color:#dc3545;--warning-color:#ffc107}
+    body{font-family:Arial,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Neue,sans-serif;line-height:1.6;padding-top:76px}
+    .navbar-custom{background:rgba(30,58,95,.95)!important;backdrop-filter:blur(10px);transition:.3s}
+    .navbar-brand{font-weight:700;color:var(--accent-color)!important;font-size:1.5rem}
+    .nav-link{color:var(--text-light)!important;font-weight:500}
+    .nav-link:hover,.nav-link.active{color:var(--accent-color)!important}
+    .page-header{background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));color:var(--text-light);padding:60px 0}
+    .breadcrumb a{color:#fff;text-decoration:underline}
+    .section-title{position:relative;display:inline-block;color:var(--primary-color);font-weight:700;margin-bottom:30px}
+    .section-title::after{content:'';position:absolute;bottom:-10px;left:0;width:50px;height:3px;background:var(--accent-color);border-radius:2px}
+    .match-card{background:#fff;border-radius:15px;padding:25px;margin-bottom:20px;box-shadow:0 4px 15px rgba(0,0,0,.1);transition:transform .3s,box-shadow .3s}
+    .match-card:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(0,0,0,.15)}
+    .match-upcoming{border-left:5px solid var(--secondary-color)}
+    .match-victory{border-left:5px solid var(--success-color)}
+    .match-defeat{border-left:5px solid var(--danger-color)}
+    .match-draw{border-left:5px solid var(--warning-color)}
+    .team-info{display:flex;align-items:center;margin-bottom:15px}
+    .team-logo{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--secondary-color),var(--primary-color));display:flex;align-items:center;justify-content:center;margin-right:15px;font-size:1.5rem;color:#fff}
+    .score-display{font-size:2rem;font-weight:700;color:var(--primary-color);text-align:center;margin:0 20px}
+    .match-info{background:#f8f9fa;border-radius:10px;padding:15px;margin-top:15px}
+    .match-status{padding:5px 15px;border-radius:20px;font-size:.9rem;font-weight:500;display:inline-block}
+    .status-upcoming{background:var(--secondary-color);color:#fff}
+    .status-victory{background:var(--success-color);color:#fff}
+    .status-defeat{background:var(--danger-color);color:#fff}
+    .status-draw{background:var(--warning-color);color:#333}
+    .calendar-nav{background:#fff;border-radius:15px;padding:20px;margin-bottom:30px;box-shadow:0 2px 10px rgba(0,0,0,.1)}
+    .standings-table{background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.1)}
+    .standings-table .table{margin-bottom:0}
+    .standings-table th{background:var(--primary-color);color:#fff;border:0;font-weight:600}
+    .standings-table .table-striped tbody tr:nth-of-type(odd){background:rgba(44,90,160,.05)}
+    .footer-custom{background:var(--primary-color);color:var(--text-light);padding:40px 0;margin-top:50px}
+    .social-icons a{color:var(--text-light);font-size:1.5rem;margin:0 10px}
+    a:focus-visible,button:focus-visible{outline:3px solid var(--accent-color);outline-offset:2px;border-radius:6px}
+  </style>
 
-        .nav-link {
-            color: var(--text-light) !important;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
+  <!-- Fil d’Ariane (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Accueil","item":"https://samsweyyy.github.io/FC__Fulbert/"},
+      {"@type":"ListItem","position":2,"name":"Matchs","item":"https://samsweyyy.github.io/FC__Fulbert/matchs.html"}
+    ]
+  }
+  </script>
 
-        .nav-link:hover, .nav-link.active {
-            color: var(--accent-color) !important;
-        }
-
-        .card-custom {
-            border: none;
-            border-radius: 15px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .card-custom:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .card-header-custom {
-            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-            color: var(--text-light);
-            border: none;
-            padding: 20px;
-        }
-
-        .btn-primary-custom {
-            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-            border: none;
-            border-radius: 25px;
-            padding: 12px 30px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary-custom:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(45, 138, 71, 0.4);
-        }
-
-        .section-title {
-            position: relative;
-            display: inline-block;
-            color: var(--primary-color);
-            font-weight: bold;
-            margin-bottom: 30px;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background: var(--accent-color);
-            border-radius: 2px;
-        }
-
-        .stats-card {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: var(--text-light);
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .stats-number {
-            font-size: 3rem;
-            font-weight: bold;
-            color: var(--accent-color);
-        }
-
-        .footer-custom {
-            background: var(--primary-color);
-            color: var(--text-light);
-            padding: 40px 0;
-        }
-
-        .social-icons a {
-            color: var(--text-light);
-            font-size: 1.5rem;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            color: var(--accent-color);
-        }
-
-        .news-card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .news-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .news-date {
-            color: var(--accent-color);
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-fade-in {
-            animation: fadeInUp 0.6s ease-out;
-        }
-    </style>
+  <!-- Données structurées: 4 événements -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"SportsEvent",
+        "name":"FC Fulbert vs Aigles du Collège",
+        "startDate":"2025-09-30T15:00:00+02:00",
+        "eventStatus":"https://schema.org/EventScheduled",
+        "location":{"@type":"Place","name":"Stade Municipal"},
+        "homeTeam":{"@type":"SportsTeam","name":"FC Fulbert"},
+        "awayTeam":{"@type":"SportsTeam","name":"Aigles du Collège"},
+        "url":"https://samsweyyy.github.io/FC__Fulbert/matchs.html#match-2025-09-30"
+      },
+      {
+        "@type":"SportsEvent",
+        "name":"Panthères FC vs FC Fulbert",
+        "startDate":"2025-10-04T16:30:00+02:00",
+        "eventStatus":"https://schema.org/EventScheduled",
+        "location":{"@type":"Place","name":"Terrain d'honneur"},
+        "homeTeam":{"@type":"SportsTeam","name":"Panthères FC"},
+        "awayTeam":{"@type":"SportsTeam","name":"FC Fulbert"},
+        "url":"https://samsweyyy.github.io/FC__Fulbert/matchs.html#match-2025-10-04"
+      },
+      {
+        "@type":"SportsEvent",
+        "name":"FC Fulbert 4–1 Wolves United",
+        "startDate":"2025-09-29T15:00:00+02:00",
+        "eventStatus":"https://schema.org/EventCompleted",
+        "location":{"@type":"Place","name":"Domicile"},
+        "homeTeam":{"@type":"SportsTeam","name":"FC Fulbert"},
+        "awayTeam":{"@type":"SportsTeam","name":"Wolves United"},
+        "competitor":[{"@type":"SportsTeam","name":"FC Fulbert"},{"@type":"SportsTeam","name":"Wolves United"}],
+        "result":{"@type":"SportsEventResult","homeTeamScore":4,"awayTeamScore":1},
+        "url":"https://samsweyyy.github.io/FC__Fulbert/matchs.html#result-2025-09-29"
+      },
+      {
+        "@type":"SportsEvent",
+        "name":"Dragons FC 2–2 FC Fulbert",
+        "startDate":"2025-09-24T15:00:00+02:00",
+        "eventStatus":"https://schema.org/EventCompleted",
+        "location":{"@type":"Place","name":"Domicile (Dragons FC)"},
+        "homeTeam":{"@type":"SportsTeam","name":"Dragons FC"},
+        "awayTeam":{"@type":"SportsTeam","name":"FC Fulbert"},
+        "result":{"@type":"SportsEventResult","homeTeamScore":2,"awayTeamScore":2},
+        "url":"https://samsweyyy.github.io/FC__Fulbert/matchs.html#result-2025-09-24"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <i class="fas fa-futbol me-2"></i>FC Fulbert
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="equipe.html">Équipe</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="matchs.html">Matchs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="actualites.html">Actualités</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <!-- Nav -->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top" role="navigation" aria-label="Navigation principale">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="fas fa-futbol me-2" aria-hidden="true"></i>FC Fulbert</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Ouvrir le menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="equipe.html">Équipe</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="matchs.html">Matchs</a></li>
+          <li class="nav-item"><a class="nav-link" href="actualites.html">Actualités</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8 hero-content animate-fade-in">
-                    <h1 class="display-4 fw-bold mb-4">FC Fulbert</h1>
-                    <p class="lead mb-4">Le club de football qui fait la fierté de notre lycée depuis 2025. Excellence, passion et détermination sur le terrain.</p>
-                    <div class="d-flex flex-wrap gap-3">
-                        <a href="matchs.html" class="btn btn-primary-custom btn-lg">
-                            <i class="fas fa-play me-2"></i>Voir les Matchs
-                        </a>
-                        <a href="contact.html" class="btn btn-outline-light btn-lg">
-                            <i class="fas fa-users me-2"></i>Rejoindre l'Équipe
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <div class="hero-stats">
-                        <div class="stats-card animate-fade-in" style="animation-delay: 0.2s;">
-                            <div class="stats-number">12</div>
-                            <div>Victoires</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- En-tête -->
+  <section class="page-header" aria-labelledby="titre-page">
+    <div class="container">
+      <nav aria-label="fil d’ariane">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Matchs</li>
+        </ol>
+      </nav>
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1 id="titre-page" class="display-4 fw-bold mb-3">Matchs & résultats</h1>
+          <p class="lead">Suivez tous les matchs du FC Fulbert</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation Calendrier -->
+  <section class="py-4" aria-label="Navigation saison">
+    <div class="container">
+      <div class="calendar-nav text-center">
+        <h5 class="mb-3">Saison 2024-2025</h5>
+        <div class="btn-group" role="group" aria-label="Mois">
+          <button type="button" class="btn btn-outline-primary">Septembre</button>
+          <button type="button" class="btn btn-primary">Octobre</button>
+          <button type="button" class="btn btn-outline-primary">Novembre</button>
+          <button type="button" class="btn btn-outline-primary">Décembre</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prochains Matchs -->
+  <main id="contenu" tabindex="-1">
+    <section class="py-5" aria-labelledby="prochains-titre">
+      <div class="container">
+        <h2 id="prochains-titre" class="section-title text-center mb-5">Prochains matchs</h2>
+        <div class="row">
+          <!-- Match 1 -->
+          <div class="col-lg-6 mb-4">
+            <article class="match-card match-upcoming" id="match-2025-09-30">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="match-status status-upcoming">Prochain match</span>
+                <small class="text-muted">
+                  <time datetime="2025-09-30T15:00:00+02:00">Mardi 30 septembre • 15:00</time>
+                </small>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-5">
+                  <div class="team-info">
+                    <div class="team-logo"><i class="fas fa-futbol" aria-hidden="true"></i></div>
+                    <div><h3 class="h6 mb-1">FC Fulbert</h3><small class="text-muted">Domicile</small></div>
+                  </div>
+                </div>
+                <div class="col-2 text-center"><div class="score-display">VS</div></div>
+                <div class="col-5">
+                  <div class="team-info justify-content-end">
+                    <div><h3 class="h6 mb-1 text-end">Aigles du Collège</h3><small class="text-muted">Extérieur</small></div>
+                    <div class="team-logo ms-3"><i class="fas fa-feather" aria-hidden="true"></i></div>
+                  </div>
+                </div>
+              </div>
+              <div class="match-info">
+                <div class="row">
+                  <div class="col-md-4"><i class="fas fa-calendar me-2" aria-hidden="true"></i>Championnat</div>
+                  <div class="col-md-4"><i class="fas fa-map-marker-alt me-2" aria-hidden="true"></i>Stade Municipal</div>
+                  <div class="col-md-4"><a class="btn btn-sm btn-outline-primary w-100" href="#classement">Voir le classement</a></div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <!-- Match 2 -->
+          <div class="col-lg-6 mb-4">
+            <article class="match-card match-upcoming" id="match-2025-10-04">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="match-status status-upcoming">À venir</span>
+                <small class="text-muted">
+                  <time datetime="2025-10-04T16:30:00+02:00">Samedi 4 octobre • 16:30</time>
+                </small>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-5">
+                  <div class="team-info">
+                    <div class="team-logo"><i class="fas fa-paw" aria-hidden="true"></i></div>
+                    <div><h3 class="h6 mb-1">Panthères FC</h3><small class="text-muted">Domicile</small></div>
+                  </div>
+                </div>
+                <div class="col-2 text-center"><div class="score-display">VS</div></div>
+                <div class="col-5">
+                  <div class="team-info justify-content-end">
+                    <div><h3 class="h6 mb-1 text-end">FC Fulbert</h3><small class="text-muted">Extérieur</small></div>
+                    <div class="team-logo ms-3"><i class="fas fa-futbol" aria-hidden="true"></i></div>
+                  </div>
+                </div>
+              </div>
+              <div class="match-info">
+                <div class="row">
+                  <div class="col-md-4"><i class="fas fa-calendar me-2" aria-hidden="true"></i>Championnat</div>
+                  <div class="col-md-4"><i class="fas fa-map-marker-alt me-2" aria-hidden="true"></i>Terrain d'honneur</div>
+                  <div class="col-md-4"><a class="btn btn-sm btn-outline-primary w-100" href="#classement">Voir le classement</a></div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Statistiques -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="stats-card">
-                        <div class="stats-number">25</div>
-                        <div>Joueurs</div>
-                    </div>
+    <!-- Derniers Résultats -->
+    <section class="py-5 bg-light" aria-labelledby="resultats-titre">
+      <div class="container">
+        <h2 id="resultats-titre" class="section-title text-center mb-5">Derniers résultats</h2>
+        <div class="row">
+          <div class="col-lg-6 mb-4">
+            <article class="match-card match-victory" id="result-2025-09-29">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="match-status status-victory">Victoire</span>
+                <small class="text-muted"><time datetime="2025-09-29">29 septembre 2025</time></small>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-5">
+                  <div class="team-info">
+                    <div class="team-logo"><i class="fas fa-futbol" aria-hidden="true"></i></div>
+                    <div><h3 class="h6 mb-1">FC Fulbert</h3><small class="text-muted">Domicile</small></div>
+                  </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="stats-card">
-                        <div class="stats-number">18</div>
-                        <div>Matchs Joués</div>
-                    </div>
+                <div class="col-2 text-center"><div class="score-display">4-1</div></div>
+                <div class="col-5">
+                  <div class="team-info justify-content-end">
+                    <div><h3 class="h6 mb-1 text-end">Wolves United</h3><small class="text-muted">Extérieur</small></div>
+                    <div class="team-logo ms-3"><i class="fas fa-dog" aria-hidden="true"></i></div>
+                  </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="stats-card">
-                        <div class="stats-number">3</div>
-                        <div>Trophées</div>
-                    </div>
+              </div>
+              <div class="match-info"><strong>Buteurs :</strong> Lucas Dubois (2), Nathan Rousseau, Thomas Martin</div>
+            </article>
+          </div>
+          <div class="col-lg-6 mb-4">
+            <article class="match-card match-draw" id="result-2025-09-24">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="match-status status-draw">Match nul</span>
+                <small class="text-muted"><time datetime="2025-09-24">24 septembre 2025</time></small>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-5">
+                  <div class="team-info">
+                    <div class="team-logo"><i class="fas fa-fire" aria-hidden="true"></i></div>
+                    <div><h3 class="h6 mb-1">Dragons FC</h3><small class="text-muted">Domicile</small></div>
+                  </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="stats-card">
-                        <div class="stats-number">2</div>
-                        <div>Entraîneurs</div>
-                    </div>
+                <div class="col-2 text-center"><div class="score-display">2-2</div></div>
+                <div class="col-5">
+                  <div class="team-info justify-content-end">
+                    <div><h3 class="h6 mb-1 text-end">FC Fulbert</h3><small class="text-muted">Extérieur</small></div>
+                    <div class="team-logo ms-3"><i class="fas fa-futbol" aria-hidden="true"></i></div>
+                  </div>
                 </div>
-            </div>
+              </div>
+              <div class="match-info"><strong>Buteurs :</strong> Maxime Petit, Romain Garcia</div>
+            </article>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Dernières actualités -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="section-title text-center mb-5">Dernières Actualités</h2>
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="news-card">
-                        <div class="news-date mb-2">28 Septembre 2025</div>
-                        <h5>Victoire écrasante contre les Wolves !</h5>
-                        <p>Le FC Fulbert a dominé le match avec un score de 4-1. Une performance exceptionnelle de toute l'équipe qui nous propulse en tête du championnat.</p>
-                        <a href="actualites.html" class="btn btn-sm btn-outline-primary">Lire la suite</a>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="news-card">
-                        <div class="news-date mb-2">25 Septembre 2025</div>
-                        <h5>Nouveau joueur dans l'équipe</h5>
-                        <p>Nous accueillons Pierre Moreau, défenseur talentueux qui vient renforcer notre ligne arrière pour la suite de la saison.</p>
-                        <a href="actualites.html" class="btn btn-sm btn-outline-primary">Lire la suite</a>
-                    </div>
-                </div>
+    <!-- Classement -->
+    <section class="py-5" id="classement" aria-labelledby="classement-titre">
+      <div class="container">
+        <h2 id="classement-titre" class="section-title text-center mb-5">Classement championnat</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="standings-table" role="region" aria-label="Tableau du classement">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Pos</th>
+                    <th scope="col">Équipe</th>
+                    <th scope="col" class="text-center">J</th>
+                    <th scope="col" class="text-center">G</th>
+                    <th scope="col" class="text-center">N</th>
+                    <th scope="col" class="text-center">P</th>
+                    <th scope="col" class="text-center">BP</th>
+                    <th scope="col" class="text-center">BC</th>
+                    <th scope="col" class="text-center">Diff</th>
+                    <th scope="col" class="text-center">Pts</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-success">
+                    <td><strong>1</strong></td>
+                    <td><strong><i class="fas fa-futbol me-2" aria-hidden="true"></i>FC Fulbert</strong></td>
+                    <td class="text-center">18</td><td class="text-center">12</td><td class="text-center">4</td><td class="text-center">2</td>
+                    <td class="text-center">38</td><td class="text-center">15</td><td class="text-center">+23</td>
+                    <td class="text-center"><strong>40</strong></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td><i class="fas fa-crown me-2" aria-hidden="true"></i>Royal Academy</td>
+                    <td class="text-center">18</td><td class="text-center">11</td><td class="text-center">5</td><td class="text-center">2</td>
+                    <td class="text-center">32</td><td class="text-center">12</td><td class="text-center">+20</td><td class="text-center">38</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td><i class="fas fa-dragon me-2" aria-hidden="true"></i>Dragons FC</td>
+                    <td class="text-center">18</td><td class="text-center">10</td><td class="text-center">6</td><td class="text-center">2</td>
+                    <td class="text-center">28</td><td class="text-center">16</td><td class="text-center">+12</td><td class="text-center">36</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td><i class="fas fa-paw me-2" aria-hidden="true"></i>Panthères FC</td>
+                    <td class="text-center">18</td><td class="text-center">9</td><td class="text-center">4</td><td class="text-center">5</td>
+                    <td class="text-center">26</td><td class="text-center">20</td><td class="text-center">+6</td><td class="text-center">31</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td><i class="fas fa-feather me-2" aria-hidden="true"></i>Aigles du Collège</td>
+                    <td class="text-center">18</td><td class="text-center">7</td><td class="text-center">6</td><td class="text-center">5</td>
+                    <td class="text-center">24</td><td class="text-center">22</td><td class="text-center">+2</td><td class="text-center">27</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td><i class="fas fa-cat me-2" aria-hidden="true"></i>Tigres FC</td>
+                    <td class="text-center">18</td><td class="text-center">6</td><td class="text-center">5</td><td class="text-center">7</td>
+                    <td class="text-center">18</td><td class="text-center">25</td><td class="text-center">-7</td><td class="text-center">23</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td><i class="fas fa-dog me-2" aria-hidden="true"></i>Wolves United</td>
+                    <td class="text-center">18</td><td class="text-center">4</td><td class="text-center">6</td><td class="text-center">8</td>
+                    <td class="text-center">16</td><td class="text-center">28</td><td class="text-center">-12</td><td class="text-center">18</td>
+                  </tr>
+                  <tr class="table-danger">
+                    <td>8</td>
+                    <td><i class="fas fa-bolt me-2" aria-hidden="true"></i>Lightning FC</td>
+                    <td class="text-center">18</td><td class="text-center">2</td><td class="text-center">4</td><td class="text-center">12</td>
+                    <td class="text-center">12</td><td class="text-center">35</td><td class="text-center">-23</td><td class="text-center">10</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div class="text-center">
-                <a href="actualites.html" class="btn btn-primary-custom">Voir toutes les actualités</a>
+            <div class="mt-3" aria-label="Légende du classement">
+              <div class="row text-center">
+                <div class="col-md-4"><span class="badge bg-success me-2">&nbsp;</span><small>Qualification playoffs</small></div>
+                <div class="col-md-4"><span class="badge bg-warning me-2">&nbsp;</span><small>Zone neutre</small></div>
+                <div class="col-md-4"><span class="badge bg-danger me-2">&nbsp;</span><small>Relégation</small></div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
+  </main>
 
-    <!-- Prochain match -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title text-center mb-5">Prochain Match</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="card card-custom">
-                        <div class="card-body p-4">
-                            <div class="row align-items-center text-center">
-                                <div class="col-md-4">
-                                    <h4>FC Fulbert</h4>
-                                    <div class="my-3">
-                                        <i class="fas fa-futbol text-primary" style="font-size: 3rem;"></i>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <h2 class="text-primary mb-3">VS</h2>
-                                    <p class="mb-1"><i class="fas fa-calendar me-2"></i>Samedi 30 Septembre</p>
-                                    <p class="mb-1"><i class="fas fa-clock me-2"></i>15h00</p>
-                                    <p class="mb-0"><i class="fas fa-map-marker-alt me-2"></i>Stade Municipal</p>
-                                </div>
-                                <div class="col-md-4">
-                                    <h4>Aigles du Collège</h4>
-                                    <div class="my-3">
-                                        <i class="fas fa-futbol text-secondary" style="font-size: 3rem;"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-center mt-4">
-                                <a href="matchs.html" class="btn btn-primary-custom">Voir tous les matchs</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- Footer -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2 class="h5">FC Fulbert</h2>
+          <p>Le club de football qui porte haut les couleurs de notre établissement depuis 2025.</p>
+          <div class="social-icons" aria-label="Réseaux sociaux">
+            <a href="https://www.facebook.com/" aria-label="Facebook" rel="me noopener" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/" aria-label="Instagram" rel="me noopener" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/" aria-label="X (Twitter)" rel="me noopener" target="_blank"><i class="fab fa-twitter"></i></a>
+          </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer-custom">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h5>FC Fulbert</h5>
-                    <p>Le club de football qui porte haut les couleurs de notre établissement depuis 2025.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-6 text-lg-end">
-                    <p>&copy; 2025 FC Fulbert. Tous droits réservés.</p>
-                    <p>Créé avec passion pour notre club ⚽</p>
-                </div>
-            </div>
+        <div class="col-lg-6 text-lg-end">
+          <p>&copy; 2025 FC Fulbert. Tous droits réservés.</p>
+          <p><a class="link-light" href="mentions-legales.html" rel="nofollow">Mentions légales</a></p>
         </div>
-    </footer>
+      </div>
+    </div>
+  </footer>
 
-    <!-- Scripts Bootstrap -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Animation au scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements for animation
-        document.querySelectorAll('.card-custom, .news-card, .stats-card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-
-        // Navbar transparency effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar-custom');
-            if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(30, 58, 95, 0.98)';
-            } else {
-                navbar.style.background = 'rgba(30, 58, 95, 0.95)';
-            }
-        });
-    </script>
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script>
+    // Apparition douce au scroll
+    const obs = new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}})},{threshold:.1,rootMargin:'0px 0px -50px 0px'});
+    document.querySelectorAll('.match-card,.standings-table').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity .6s ease, transform .6s ease';obs.observe(el);});
+    // Navbar
+    addEventListener('scroll',()=>{const n=document.querySelector('.navbar-custom');n.style.background=scrollY>50?'rgba(30,58,95,.98)':'rgba(30,58,95,.95)';});
+  </script>
+  <noscript>Les matchs et résultats restent visibles sans JavaScript.</noscript>
 </body>
 </html>

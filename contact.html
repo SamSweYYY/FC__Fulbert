@@ -1,596 +1,365 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FC Fulbert - Contact</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #1e3a5f;
-            --secondary-color: #2c5aa0;
-            --accent-color: #d4af37;
-            --text-light: #ffffff;
-        }
+  <meta charset="utf-8">
+  <title>Contact FC Fulbert | Email, téléphone, adresse & horaires</title>
+  <meta name="description" content="Contactez le FC Fulbert : email, téléphone, adresse, horaires d’entraînement et accès. Envoyez-nous un message via le formulaire.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            padding-top: 76px;
-        }
+  <!-- Canonique -->
+  <link rel="canonical" href="https://samsweyyy.github.io/FC__Fulbert/contact.html">
 
-        .navbar-custom {
-            background: rgba(30, 58, 95, 0.95) !important;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
+  <!-- Open Graph / Twitter -->
+  <meta property="og:site_name" content="FC Fulbert">
+  <meta property="og:title" content="Contact FC Fulbert">
+  <meta property="og:description" content="Email, téléphone, adresse, horaires d’entraînement et formulaire de contact du FC Fulbert.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://samsweyyy.github.io/FC__Fulbert/contact.html">
+  <meta property="og:image" content="https://samsweyyy.github.io/FC__Fulbert/images/og-contact.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
-        .navbar-brand {
-            font-weight: bold;
-            color: var(--accent-color) !important;
-            font-size: 1.5rem;
-        }
+  <link rel="icon" href="/FC__Fulbert/favicon.ico">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
-        .nav-link {
-            color: var(--text-light) !important;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
 
-        .nav-link:hover, .nav-link.active {
-            color: var(--accent-color) !important;
-        }
+  <style>
+    :root{--primary-color:#1e3a5f;--secondary-color:#2c5aa0;--accent-color:#d4af37;--text-light:#ffffff}
+    body{font-family:Arial,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Neue,sans-serif;line-height:1.6;padding-top:76px}
+    .navbar-custom{background:rgba(30,58,95,.95)!important;backdrop-filter:blur(10px);transition:.3s}
+    .navbar-brand{font-weight:700;color:var(--accent-color)!important;font-size:1.5rem}
+    .nav-link{color:var(--text-light)!important;font-weight:500}
+    .nav-link:hover,.nav-link.active{color:var(--accent-color)!important}
+    .page-header{background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));color:var(--text-light);padding:60px 0}
+    .breadcrumb a{color:#fff;text-decoration:underline}
+    .section-title{position:relative;display:inline-block;color:var(--primary-color);font-weight:700;margin-bottom:30px}
+    .section-title::after{content:'';position:absolute;bottom:-10px;left:0;width:50px;height:3px;background:var(--accent-color);border-radius:2px}
+    .contact-card{background:#fff;border-radius:15px;padding:30px;box-shadow:0 4px 15px rgba(0,0,0,.1);margin-bottom:30px;transition:transform .3s,box-shadow .3s}
+    .contact-card:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(0,0,0,.15)}
+    .contact-icon{width:80px;height:80px;background:linear-gradient(135deg,var(--secondary-color),var(--primary-color));border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:2rem;color:#fff}
+    .contact-form{background:#fff;border-radius:15px;padding:40px;box-shadow:0 4px 15px rgba(0,0,0,.1)}
+    .form-control{border:2px solid #e0e0e0;border-radius:10px;padding:12px 15px;margin-bottom:20px;transition:border-color .3s}
+    .form-control:focus{border-color:var(--secondary-color);box-shadow:0 0 0 .2rem rgba(44,90,160,.25)}
+    .btn-primary-custom{background:linear-gradient(135deg,var(--secondary-color),var(--primary-color));border:0;border-radius:25px;padding:12px 30px;font-weight:700}
+    .info-section{background:#fff;border-radius:15px;padding:30px;box-shadow:0 4px 15px rgba(0,0,0,.1);margin-bottom:30px}
+    .info-item{display:flex;align-items:center;margin-bottom:20px;padding:15px;background:#f8f9fa;border-radius:10px}
+    .info-icon{width:50px;height:50px;background:var(--secondary-color);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-right:15px;color:#fff;font-size:1.2rem}
+    .schedule-table{background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.1)}
+    .schedule-table th{background:var(--primary-color);color:#fff;border:0;font-weight:600;padding:15px}
+    .schedule-table td{padding:15px;border-bottom:1px solid #eee}
+    .map-container{background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.1);height:300px;display:flex;align-items:center;justify-content:center;margin-bottom:30px}
+    .map-placeholder{text-align:center;color:#666}
+    .social-links{display:flex;justify-content:center;gap:15px;margin-top:30px}
+    .social-link{width:60px;height:60px;background:linear-gradient(135deg,var(--secondary-color),var(--primary-color));border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.5rem;text-decoration:none;transition:transform .3s, box-shadow .3s}
+    .social-link:hover{transform:translateY(-5px);box-shadow:0 5px 15px rgba(44,90,160,.4);color:#fff}
+    .footer-custom{background:var(--primary-color);color:var(--text-light);padding:40px 0;margin-top:50px}
+    .social-icons a{color:var(--text-light);font-size:1.5rem;margin:0 10px}
+    a:focus-visible,button:focus-visible{outline:3px solid var(--accent-color);outline-offset:2px;border-radius:6px}
+  </style>
 
-        .page-header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: var(--text-light);
-            padding: 60px 0;
-        }
+  <!-- JSON-LD: Organisation + contacts + adresse -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"FC Fulbert",
+    "url":"https://samsweyyy.github.io/FC__Fulbert/",
+    "logo":"https://samsweyyy.github.io/FC__Fulbert/images/logo.png",
+    "email":"mailto:contact@fcfulbert.fr",
+    "telephone":"+33-1-23-45-67-89",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"62 Rue Saint-Chéron",
+      "addressLocality":"Chartres",
+      "postalCode":"28000",
+      "addressCountry":"FR"
+    },
+    "contactPoint":[
+      {"@type":"ContactPoint","contactType":"Service général","email":"contact@fcfulbert.fr","telephone":"+33-1-23-45-67-89","areaServed":"FR","availableLanguage":["fr"]},
+      {"@type":"ContactPoint","contactType":"Presse","email":"presse@fcfulbert.fr","areaServed":"FR","availableLanguage":["fr"]}
+    ],
+    "sameAs":[
+      "https://www.facebook.com/",
+      "https://www.instagram.com/",
+      "https://x.com/"
+    ]
+  }
+  </script>
 
-        .section-title {
-            position: relative;
-            display: inline-block;
-            color: var(--primary-color);
-            font-weight: bold;
-            margin-bottom: 30px;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background: var(--accent-color);
-            border-radius: 2px;
-        }
-
-        .contact-card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .contact-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-
-        .contact-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 2rem;
-            color: white;
-        }
-
-        .contact-form {
-            background: white;
-            border-radius: 15px;
-            padding: 40px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .form-control {
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
-            padding: 12px 15px;
-            margin-bottom: 20px;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-control:focus {
-            border-color: var(--secondary-color);
-            box-shadow: 0 0 0 0.2rem rgba(44, 90, 160, 0.25);
-        }
-
-        .btn-primary-custom {
-            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-            border: none;
-            border-radius: 25px;
-            padding: 12px 30px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary-custom:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(44, 90, 160, 0.4);
-        }
-
-        .info-section {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-        }
-
-        .info-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            padding: 15px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            transition: background-color 0.3s ease;
-        }
-
-        .info-item:hover {
-            background: rgba(44, 90, 160, 0.1);
-        }
-
-        .info-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--secondary-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            color: white;
-            font-size: 1.2rem;
-        }
-
-        .schedule-table {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .schedule-table .table {
-            margin-bottom: 0;
-        }
-
-        .schedule-table th {
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            font-weight: 600;
-            padding: 15px;
-        }
-
-        .schedule-table td {
-            padding: 15px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .map-container {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 30px;
-        }
-
-        .map-placeholder {
-            text-align: center;
-            color: #666;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        .social-link {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-link:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(44, 90, 160, 0.4);
-            color: white;
-        }
-
-        .footer-custom {
-            background: var(--primary-color);
-            color: var(--text-light);
-            padding: 40px 0;
-            margin-top: 50px;
-        }
-
-        .social-icons a {
-            color: var(--text-light);
-            font-size: 1.5rem;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            color: var(--accent-color);
-        }
-    </style>
+  <!-- Fil d’Ariane (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Accueil","item":"https://samsweyyy.github.io/FC__Fulbert/"},
+      {"@type":"ListItem","position":2,"name":"Contact","item":"https://samsweyyy.github.io/FC__Fulbert/contact.html"}
+    ]
+  }
+  </script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <i class="fas fa-futbol me-2"></i>FC Fulbert
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="equipe.html">Équipe</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="matchs.html">Matchs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="actualites.html">Actualités</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
+  <!-- Nav -->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top" role="navigation" aria-label="Navigation principale">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="fas fa-futbol me-2" aria-hidden="true"></i>FC Fulbert</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Ouvrir le menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="equipe.html">Équipe</a></li>
+          <li class="nav-item"><a class="nav-link" href="matchs.html">Matchs</a></li>
+          <li class="nav-item"><a class="nav-link" href="actualites.html">Actualités</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- En-tête -->
+  <section class="page-header" aria-labelledby="titre-page">
+    <div class="container">
+      <nav aria-label="fil d’ariane">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Contact</li>
+        </ol>
+      </nav>
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1 id="titre-page" class="display-4 fw-bold mb-3">Contactez-nous</h1>
+          <p class="lead">Nous sommes là pour répondre à toutes vos questions</p>
         </div>
-    </nav>
+      </div>
+    </div>
+  </section>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h1 class="display-4 fw-bold mb-3">Contactez-nous</h1>
-                    <p class="lead">Nous sommes là pour répondre à toutes vos questions</p>
-                </div>
-            </div>
+  <!-- Contact rapide -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row" role="list">
+        <div class="col-md-4 mb-4" role="listitem">
+          <div class="contact-card text-center">
+            <div class="contact-icon" aria-hidden="true"><i class="fas fa-envelope"></i></div>
+            <h2 class="h5">Email</h2>
+            <p class="text-muted">Écrivez-nous</p>
+            <a href="mailto:contact@fcfulbert.fr" class="text-primary">contact@fcfulbert.fr</a>
+          </div>
         </div>
-    </section>
-
-    <!-- Contact rapide -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="contact-card text-center">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h5>Email</h5>
-                        <p class="text-muted">Écrivez-nous</p>
-                        <a href="mailto:contact@fcfulbert.fr" class="text-primary">contact@fcfulbert.fr</a>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="contact-card text-center">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <h5>Téléphone</h5>
-                        <p class="text-muted">Appelez-nous</p>
-                        <a href="tel:+33123456789" class="text-primary">+33 1 23 45 67 89</a>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="contact-card text-center">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h5>Adresse</h5>
-                        <p class="text-muted">Venez nous voir</p>
-                        <address class="mb-0">
-                            Lycée Fulbert<br>
-                            62 Rue Saint-Chéron<br>
-                            28000 Chartres
-                        </address>
-                    </div>
-                </div>
-            </div>
+        <div class="col-md-4 mb-4" role="listitem">
+          <div class="contact-card text-center">
+            <div class="contact-icon" aria-hidden="true"><i class="fas fa-phone"></i></div>
+            <h2 class="h5">Téléphone</h2>
+            <p class="text-muted">Appelez-nous</p>
+            <a href="tel:+33123456789" class="text-primary">+33&nbsp;1&nbsp;23&nbsp;45&nbsp;67&nbsp;89</a>
+          </div>
         </div>
-    </section>
-
-    <!-- Formulaire de contact et informations -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mb-4">
-                    <div class="contact-form">
-                        <h2 class="section-title mb-4">Envoyez-nous un message</h2>
-                        <form>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Votre nom *" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="email" class="form-control" placeholder="Votre email *" required>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <input type="tel" class="form-control" placeholder="Votre téléphone">
-                                </div>
-                                <div class="col-md-6">
-                                    <select class="form-control">
-                                        <option value="">Sujet *</option>
-                                        <option value="recrutement">Recrutement</option>
-                                        <option value="information">Information générale</option>
-                                        <option value="partenariat">Partenariat</option>
-                                        <option value="presse">Presse</option>
-                                        <option value="autre">Autre</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <textarea class="form-control" rows="6" placeholder="Votre message *" required></textarea>
-                            <div class="form-check mb-3">
-                                <input class="form-check-input" type="checkbox" id="rgpd" required>
-                                <label class="form-check-label" for="rgpd">
-                                    J'accepte que mes données soient utilisées pour me recontacter
-                                </label>
-                            </div>
-                            <button type="submit" class="btn btn-primary-custom btn-lg">
-                                <i class="fas fa-paper-plane me-2"></i>Envoyer le message
-                            </button>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <!-- Informations pratiques -->
-                    <div class="info-section">
-                        <h5 class="section-title mb-4">Informations pratiques</h5>
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <i class="fas fa-user-tie"></i>
-                            </div>
-                            <div>
-                                <strong>Président du club</strong><br>
-                                <small>M. Jean-Pierre Moreau</small>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <i class="fas fa-clipboard-list"></i>
-                            </div>
-                            <div>
-                                <strong>Entraîneur principal</strong><br>
-                                <small>Marc Dubois</small>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div>
-                                <strong>Responsable recrutement</strong><br>
-                                <small>Sophie Martin</small>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <i class="fas fa-newspaper"></i>
-                            </div>
-                            <div>
-                                <strong>Relations presse</strong><br>
-                                <small>presse@fcfulbert.fr</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Réseaux sociaux -->
-                    <div class="info-section text-center">
-                        <h5 class="section-title mb-4">Suivez-nous</h5>
-                        <div class="social-links">
-                            <a href="#" class="social-link">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="social-link">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="social-link">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="social-link">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="col-md-4 mb-4" role="listitem">
+          <div class="contact-card text-center">
+            <div class="contact-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></div>
+            <h2 class="h5">Adresse</h2>
+            <p class="text-muted">Venez nous voir</p>
+            <address class="mb-0">
+              Lycée Fulbert<br>
+              62 Rue Saint-Chéron<br>
+              28000 Chartres
+            </address>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Horaires et localisation -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <h2 class="section-title mb-4">Horaires d'entraînement</h2>
-                    <div class="schedule-table">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Jour</th>
-                                    <th>Horaires</th>
-                                    <th>Lieu</th>
-                                    <th>Groupe</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>Lundi</strong></td>
-                                    <td>17h00 - 19h00</td>
-                                    <td>Terrain du lycée</td>
-                                    <td>Équipe première</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Mercredi</strong></td>
-                                    <td>17h00 - 19h00</td>
-                                    <td>Stade Municipal</td>
-                                    <td>Équipe première</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Vendredi</strong></td>
-                                    <td>16h00 - 17h30</td>
-                                    <td>Terrain du lycée</td>
-                                    <td>Entraînement libre</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Samedi</strong></td>
-                                    <td>14h00 - 16h00</td>
-                                    <td>Selon calendrier</td>
-                                    <td>Matchs officiels</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="mt-3">
-                        <p class="text-muted"><small>
-                            <i class="fas fa-info-circle me-2"></i>
-                            Les horaires peuvent varier selon les conditions météo et le calendrier scolaire.
-                        </small></p>
-                    </div>
+  <!-- Formulaire + infos -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <!-- Formulaire -->
+        <div class="col-lg-8 mb-4">
+          <div class="contact-form">
+            <h2 class="section-title mb-4">Envoyez-nous un message</h2>
+
+            <!-- Formulaire statique : envoi via mailto (fallback GitHub Pages). Remplacez par un endpoint Formspree/Netlify si besoin. -->
+            <form action="mailto:contact@fcfulbert.fr" method="post" enctype="text/plain" aria-labelledby="form-contact-titre" novalidate>
+              <h3 id="form-contact-titre" class="visually-hidden">Formulaire de contact</h3>
+
+              <!-- Champ piège anti-spam -->
+              <div class="visually-hidden" aria-hidden="true">
+                <label for="website">Ne pas remplir</label>
+                <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="nom" class="form-label">Votre nom *</label>
+                  <input id="nom" name="nom" type="text" class="form-control" required autocomplete="name" aria-required="true">
                 </div>
-                <div class="col-lg-6">
-                    <h2 class="section-title mb-4">Comment nous trouver</h2>
-                    <div class="map-container">
-                        <div class="map-placeholder">
-                            <i class="fas fa-map-marked-alt fa-3x text-muted mb-3"></i>
-                            <p class="text-muted">Carte interactive</p>
-                            <small class="text-muted">
-                                Lycée Fulbert<br>
-                                62 Rue Saint-Chéron<br>
-                                28000 Chartres
-                            </small>
-                        </div>
-                    </div>
-                    <div class="info-section">
-                        <h6>Accès en transports</h6>
-                        <div class="mb-2">
-                            <i class="fas fa-subway me-2"></i>
-                            <strong>Train :</strong> Gare de Chartres (10 min à pied)
-                        </div>
-                        <div class="mb-2">
-                            <i class="fas fa-bus me-2"></i>
-                            <strong>Bus :</strong> Lignes Filibus 1, 2, 3 - arrêt "Saint-Chéron"
-                        </div>
-                        <div class="mb-2">
-                            <i class="fas fa-car me-2"></i>
-                            <strong>Parking :</strong> Parking visiteurs disponible
-                        </div>
-                    </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Votre email *</label>
+                  <input id="email" name="email" type="email" class="form-control" required autocomplete="email" aria-required="true" inputmode="email">
                 </div>
-            </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="tel" class="form-label">Votre téléphone</label>
+                  <input id="tel" name="telephone" type="tel" class="form-control" autocomplete="tel" inputmode="tel">
+                </div>
+                <div class="col-md-6">
+                  <label for="sujet" class="form-label">Sujet *</label>
+                  <select id="sujet" name="sujet" class="form-control" required aria-required="true">
+                    <option value="" selected>Choisir…</option>
+                    <option value="recrutement">Recrutement</option>
+                    <option value="information">Information générale</option>
+                    <option value="partenariat">Partenariat</option>
+                    <option value="presse">Presse</option>
+                    <option value="autre">Autre</option>
+                  </select>
+                </div>
+              </div>
+
+              <label for="message" class="form-label">Votre message *</label>
+              <textarea id="message" name="message" class="form-control" rows="6" required aria-required="true"></textarea>
+
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="rgpd" required aria-required="true">
+                <label class="form-check-label" for="rgpd">
+                  J’accepte que mes données soient utilisées pour me recontacter.
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary-custom btn-lg">
+                <i class="fas fa-paper-plane me-2" aria-hidden="true"></i>Envoyer le message
+              </button>
+            </form>
+          </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer-custom">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h5>FC Fulbert</h5>
-                    <p>Le club de football qui porte haut les couleurs de notre établissement depuis 2025.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-6 text-lg-end">
-                    <p>&copy; 2025 FC Fulbert. Tous droits réservés.</p>
-                    <p>Créé avec passion pour notre club ⚽</p>
-                </div>
+        <!-- Colonne infos -->
+        <aside class="col-lg-4">
+          <div class="info-section">
+            <h5 class="section-title mb-4">Informations pratiques</h5>
+            <div class="info-item">
+              <div class="info-icon" aria-hidden="true"><i class="fas fa-user-tie"></i></div>
+              <div><strong>Président du club</strong><br><small>M. Jean-Pierre Moreau</small></div>
             </div>
+            <div class="info-item">
+              <div class="info-icon" aria-hidden="true"><i class="fas fa-clipboard-list"></i></div>
+              <div><strong>Entraîneur principal</strong><br><small>Marc Dubois</small></div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon" aria-hidden="true"><i class="fas fa-users"></i></div>
+              <div><strong>Responsable recrutement</strong><br><small>Sophie Martin</small></div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon" aria-hidden="true"><i class="fas fa-newspaper"></i></div>
+              <div><strong>Relations presse</strong><br><small><a href="mailto:presse@fcfulbert.fr">presse@fcfulbert.fr</a></small></div>
+            </div>
+          </div>
+
+          <div class="info-section text-center">
+            <h5 class="section-title mb-4">Suivez-nous</h5>
+            <div class="social-links">
+              <a href="https://www.facebook.com/" class="social-link" rel="me noopener" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://x.com/" class="social-link" rel="me noopener" target="_blank" aria-label="X (Twitter)"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/" class="social-link" rel="me noopener" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.youtube.com/" class="social-link" rel="noopener" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Horaires & localisation -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <h2 class="section-title mb-4">Horaires d’entraînement</h2>
+          <div class="schedule-table">
+            <table class="table">
+              <thead>
+                <tr><th>Jour</th><th>Horaires</th><th>Lieu</th><th>Groupe</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Lundi</strong></td><td>17:00 – 19:00</td><td>Terrain du lycée</td><td>Équipe première</td></tr>
+                <tr><td><strong>Mercredi</strong></td><td>17:00 – 19:00</td><td>Stade Municipal</td><td>Équipe première</td></tr>
+                <tr><td><strong>Vendredi</strong></td><td>16:00 – 17:30</td><td>Terrain du lycée</td><td>Entraînement libre</td></tr>
+                <tr><td><strong>Samedi</strong></td><td>14:00 – 16:00</td><td>Selon calendrier</td><td>Matchs officiels</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-muted mt-3"><small><i class="fas fa-info-circle me-2" aria-hidden="true"></i>Les horaires peuvent varier selon la météo et le calendrier scolaire.</small></p>
         </div>
-    </footer>
 
-    <!-- Scripts Bootstrap -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Animation au scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 1px'
-        };
+        <div class="col-lg-6">
+          <h2 class="section-title mb-4">Comment nous trouver</h2>
+          <div class="map-container" role="img" aria-label="Localisation du FC Fulbert à Chartres">
+            <!-- Pour une vraie carte, remplacez par un <iframe> Google Maps. -->
+            <div class="map-placeholder">
+              <i class="fas fa-map-marked-alt fa-3x text-muted mb-3" aria-hidden="true"></i>
+              <p class="text-muted mb-2">Carte interactive</p>
+              <small class="text-muted">Lycée Fulbert · 62 Rue Saint-Chéron · 28000 Chartres</small>
+              <div class="mt-2">
+                <a class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=62+Rue+Saint-Ch%C3%A9ron+28000+Chartres">Ouvrir dans Google Maps</a>
+              </div>
+            </div>
+          </div>
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
+          <div class="info-section">
+            <h6>Accès en transports</h6>
+            <p class="mb-2"><i class="fas fa-train me-2" aria-hidden="true"></i><strong>Train&nbsp;:</strong> Gare de Chartres (10 min à pied)</p>
+            <p class="mb-2"><i class="fas fa-bus me-2" aria-hidden="true"></i><strong>Bus&nbsp;:</strong> Filibus 1, 2, 3 – arrêt « Saint-Chéron »</p>
+            <p class="mb-0"><i class="fas fa-car me-2" aria-hidden="true"></i><strong>Parking&nbsp;:</strong> Parking visiteurs disponible</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // Observe elements for animation
-        document.querySelectorAll('.contact-card, .contact-form, .info-section, .schedule-table').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
+  <!-- Footer -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2 class="h5">FC Fulbert</h2>
+          <p>Le club de football qui porte haut les couleurs de notre établissement depuis 2025.</p>
+          <div class="social-icons" aria-label="Réseaux sociaux">
+            <a href="https://www.facebook.com/" aria-label="Facebook" rel="me noopener" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/" aria-label="Instagram" rel="me noopener" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/" aria-label="X (Twitter)" rel="me noopener" target="_blank"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-6 text-lg-end">
+          <p>&copy; 2025 FC Fulbert. Tous droits réservés.</p>
+          <p><a class="link-light" href="mentions-legales.html" rel="nofollow">Mentions légales</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-        // Navbar transparency effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar-custom');
-            if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(30, 58, 95, 0.98)';
-            } else {
-                navbar.style.background = 'rgba(30, 58, 95, 0.95)';
-            }
-        });
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script>
+    // Animation au scroll
+    const obs = new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}})},{threshold:.1,rootMargin:'0px 0px -50px 0px'});
+    document.querySelectorAll('.contact-card,.contact-form,.info-section,.schedule-table').forEach(el=>{
+      el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity .6s ease, transform .6s ease';obs.observe(el);
+    });
 
-        // Form validation
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.');
-        });
-    </script>
+    addEventListener('scroll',()=>{const n=document.querySelector('.navbar-custom');n.style.background=scrollY>50?'rgba(30,58,95,.98)':'rgba(30,58,95,.95)';});
+
+    // Validation simple (client)
+    document.querySelector('form').addEventListener('submit', function(e){
+      // Honeypot
+      if (document.getElementById('website').value.trim()!=='') { e.preventDefault(); return; }
+      // Si vous gardez mailto:, on laisse le navigateur gérer l'envoi
+      alert('Merci pour votre message ! Nous vous répondrons dès que possible.');
+    });
+  </script>
+  <noscript>Les informations de contact restent disponibles sans JavaScript.</noscript>
 </body>
 </html>
