@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap:https://samsweyyy.github.io/FC__Fulbert/sitemap.xml
+
+Sitemap: https://samsweyyy.github.io/FC__Fulbert/sitemap.xml
