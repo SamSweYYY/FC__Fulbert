@@ -40,7 +40,14 @@
     crossorigin="anonymous">
 
   <style>
-    /* … conserve ton CSS existant ici … */
+    /* Ajouts RGAA globaux (skip-link, focus visible, reduced motion) */
+    .visually-hidden-focusable:not(:focus):not(:active){
+      position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
+    }
+    :focus-visible{outline:3px solid #a38418;outline-offset:3px;border-radius:6px}
+    @media (prefers-reduced-motion: reduce){
+      *{animation-duration:0.001ms !important;animation-iteration-count:1 !important;transition-duration:0.001ms !important;scroll-behavior:auto !important}
+    }
   </style>
 
   <!-- Données structurées (Organization + SportsTeam) -->
@@ -476,12 +483,13 @@
 <body>
   <a href="#contenu" class="visually-hidden-focusable">Aller au contenu</a>
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top" role="navigation" aria-label="Navigation principale">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <i class="fas fa-futbol me-2"></i>FC Fulbert
+        <i class="fas fa-futbol me-2" aria-hidden="true"></i>FC Fulbert
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Ouvrir le menu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -506,23 +514,26 @@
     </div>
   </nav>
 
+  <!-- Contenu principal enveloppé pour le skip-link -->
+  <main id="contenu" tabindex="-1">
+
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-12 text-center hero-content animate-fade-in">
           <div class="hero-logo">
-            <i class="fas fa-futbol"></i>
+            <i class="fas fa-futbol" aria-hidden="true"></i>
           </div>
           <h1 class="hero-title">FC FULBERT</h1>
           <p class="hero-subtitle">Le Club Fictif de Football du Lycée Fulbert</p>
           <p class="hero-tagline">"Excellence • Passion • Détermination"</p>
           <div class="d-flex flex-wrap gap-3 justify-content-center">
             <a href="equipe.html" class="btn btn-cta">
-              <i class="fas fa-users me-2"></i>Découvrir l'Équipe
+              <i class="fas fa-users me-2" aria-hidden="true"></i>Découvrir l'Équipe
             </a>
             <a href="matchs.html" class="btn btn-cta">
-              <i class="fas fa-calendar me-2"></i>Voir les Matchs
+              <i class="fas fa-calendar me-2" aria-hidden="true"></i>Voir les Matchs
             </a>
           </div>
         </div>
@@ -571,7 +582,7 @@
         <div class="col-lg-4 mb-4">
           <div class="about-card">
             <div class="about-icon">
-              <i class="fas fa-history"></i>
+              <i class="fas fa-history" aria-hidden="true"></i>
             </div>
             <h4>Notre Histoire</h4>
             <p>Fondé en 2025, le FC Fulbert est né de la passion d'élèves du Lycée Fulbert de Chartres. Depuis notre
@@ -582,7 +593,7 @@
         <div class="col-lg-4 mb-4">
           <div class="about-card">
             <div class="about-icon">
-              <i class="fas fa-target"></i>
+              <i class="fas fa-target" aria-hidden="true"></i>
             </div>
             <h4>Notre Mission</h4>
             <p>Promouvoir le football au sein du lycée, développer l'esprit d'équipe et permettre à chaque joueur de
@@ -592,7 +603,7 @@
         <div class="col-lg-4 mb-4">
           <div class="about-card">
             <div class="about-icon">
-              <i class="fas fa-trophy"></i>
+              <i class="fas fa-trophy" aria-hidden="true"></i>
             </div>
             <h4>Nos Ambitions</h4>
             <p>Remporter le championnat régional, former des joueurs complets et représenter dignement les couleurs du
@@ -607,11 +618,11 @@
   <section class="values-section">
     <div class="container">
       <h2 class="section-title">Nos Valeurs</h2>
-      <div class="row">
+    <div class="row">
         <div class="col-md-3 col-sm-6">
           <div class="value-item">
             <div class="value-icon">
-              <i class="fas fa-handshake"></i>
+              <i class="fas fa-handshake" aria-hidden="true"></i>
             </div>
             <h5 class="value-title">Respect</h5>
             <p>Respect des coéquipiers, adversaires, arbitres et du fair-play sportif</p>
@@ -620,7 +631,7 @@
         <div class="col-md-3 col-sm-6">
           <div class="value-item">
             <div class="value-icon">
-              <i class="fas fa-users"></i>
+              <i class="fas fa-users" aria-hidden="true"></i>
             </div>
             <h5 class="value-title">Solidarité</h5>
             <p>L'esprit d'équipe avant tout, nous gagnons et perdons ensemble</p>
@@ -629,7 +640,7 @@
         <div class="col-md-3 col-sm-6">
           <div class="value-item">
             <div class="value-icon">
-              <i class="fas fa-fire"></i>
+              <i class="fas fa-fire" aria-hidden="true"></i>
             </div>
             <h5 class="value-title">Passion</h5>
             <p>L'amour du jeu et le plaisir de jouer à chaque entraînement</p>
@@ -638,7 +649,7 @@
         <div class="col-md-3 col-sm-6">
           <div class="value-item">
             <div class="value-icon">
-              <i class="fas fa-star"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
             </div>
             <h5 class="value-title">Excellence</h5>
             <p>Viser la perfection sur le terrain comme en classe</p>
@@ -689,10 +700,10 @@
       <h2>Rejoins l'aventure !</h2>
       <p>Tu es lycéen et tu veux faire partie du FC Fulbert ?</p>
       <a href="contact.html" class="btn btn-cta">
-        <i class="fas fa-envelope me-2"></i>Nous Contacter
+        <i class="fas fa-envelope me-2" aria-hidden="true"></i>Nous Contacter
       </a>
       <a href="equipe.html" class="btn btn-cta">
-        <i class="fas fa-info-circle me-2"></i>En Savoir Plus
+        <i class="fas fa-info-circle me-2" aria-hidden="true"></i>En Savoir Plus
       </a>
     </div>
   </section>
@@ -704,31 +715,33 @@
       <div class="row">
         <div class="col-md-3 col-sm-6">
           <div class="partner-logo">
-            <i class="fas fa-tshirt"></i><br>
+            <i class="fas fa-tshirt" aria-hidden="true"></i><br>
             <small>SportZone</small>
           </div>
         </div>
         <div class="col-md-3 col-sm-6">
           <div class="partner-logo">
-            <i class="fas fa-utensils"></i><br>
+            <i class="fas fa-utensils" aria-hidden="true"></i><br>
             <small>Nutrition+</small>
           </div>
         </div>
         <div class="col-md-3 col-sm-6">
           <div class="partner-logo">
-            <i class="fas fa-hospital"></i><br>
+            <i class="fas fa-hospital" aria-hidden="true"></i><br>
             <small>Clinique Sport</small>
           </div>
         </div>
         <div class="col-md-3 col-sm-6">
           <div class="partner-logo">
-            <i class="fas fa-city"></i><br>
+            <i class="fas fa-city" aria-hidden="true"></i><br>
             <small>Ville de Chartres</small>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  </main><!-- /#contenu -->
 
   <!-- Footer -->
   <footer class="footer-custom">
@@ -786,6 +799,14 @@
       el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
       observer.observe(el);
     });
+
+    // Sync aria-expanded du burger (RGAA)
+    const toggler = document.querySelector('.navbar-toggler');
+    const target = document.getElementById('navbarNav');
+    if (toggler && target) {
+      target.addEventListener('shown.bs.collapse', () => toggler.setAttribute('aria-expanded', 'true'));
+      target.addEventListener('hidden.bs.collapse', () => toggler.setAttribute('aria-expanded', 'false'));
+    }
   </script>
 </body>
 </html>

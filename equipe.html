@@ -6,10 +6,13 @@
   <meta name="description" content="Découvrez l’effectif complet du FC Fulbert : staff, gardiens, défenseurs, milieux et attaquants, avec postes et statistiques clés.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Canonique -->
+  <!-- SEO / indexation -->
+  <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://samsweyyy.github.io/FC__Fulbert/equipe.html">
+  <link rel="alternate" href="https://samsweyyy.github.io/FC__Fulbert/equipe.html" hreflang="fr">
 
   <!-- Open Graph / Twitter -->
+  <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="FC Fulbert">
   <meta property="og:title" content="Équipe du FC Fulbert">
   <meta property="og:description" content="Effectif complet : staff, gardiens, défenseurs, milieux, attaquants.">
@@ -19,18 +22,31 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Favicons -->
-  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/FC__Fulbert/favicon.ico">
+
+  <!-- Apparence navigateur -->
+  <meta name="theme-color" content="#1e3a5f">
 
   <!-- Perf -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
   <!-- CSS libs -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-..." crossorigin="anonymous">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" integrity="sha384-..." crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
 
   <style>
     :root{--primary-color:#1e3a5f;--secondary-color:#2c5aa0;--accent-color:#d4af37;--text-light:#ffffff}
     body{font-family:Arial,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Neue,sans-serif;line-height:1.6;padding-top:76px}
+
+    /* Accessibilité / RGAA */
+    .visually-hidden-focusable:not(:focus):not(:active){
+      position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
+    }
+    :focus-visible{outline:3px solid #d4af37;outline-offset:3px;border-radius:6px}
+    @media (prefers-reduced-motion: reduce){
+      *{animation-duration:0.001ms !important;animation-iteration-count:1 !important;transition-duration:0.001ms !important;scroll-behavior:auto !important}
+    }
+
     .navbar-custom{background:rgba(30,58,95,.95)!important;backdrop-filter:blur(10px);transition:all .3s ease}
     .navbar-brand{font-weight:700;color:var(--accent-color)!important;font-size:1.5rem}
     .nav-link{color:var(--text-light)!important;font-weight:500;transition:color .3s ease}
@@ -66,17 +82,17 @@
     "memberOf":{"@type":"Organization","name":"Lycée Fulbert"},
     "logo":"https://samsweyyy.github.io/FC__Fulbert/images/logo.png",
     "athlete":[
-      {"@type":"Person","name":"Antoine Bernard","memberOf":"FC Fulbert","url":"https://tonsite.example/equipe.html#antoine-bernard","jobTitle":"Gardien de but"},
-      {"@type":"Person","name":"Jules Moreau","memberOf":"FC Fulbert","url":"https://tonsite.example/equipe.html#jules-moreau","jobTitle":"Gardien de but"},
-      {"@type":"Person","name":"Alex Durand","memberOf":"FC Fulbert","url":"https://tonsite.example/equipe.html#alex-durand","jobTitle":"Défenseur central"},
-      {"@type":"Person","name":"Pierre Moreau","memberOf":"FC Fulbert","url":"https://tonsite.example/equipe.html#pierre-moreau","jobTitle":"Défenseur central"},
-      {"@type":"Person","name":"Kevin Leroy","memberOf":"FC Fulbert","url":"https://tonsite.example/equipe.html#kevin-leroy","jobTitle":"Arrière gauche"},
-      {"@type":"Person","name":"Thomas Martin","memberOf":"FC Fulbert","url":"https://tonsite.example/equipe.html#thomas-martin","jobTitle":"Milieu central"},
-      {"@type":"Person","name":"Maxime Petit","memberOf":"FC Fulbert","url":"https://tonsite.example/equipe.html#maxime-petit","jobTitle":"Milieu offensif"},
-      {"@type":"Person","name":"Hugo Lambert","memberOf":"FC Fulbert","url":"https://tonsite.example/equipe.html#hugo-lambert","jobTitle":"Milieu défensif"},
-      {"@type":"Person","name":"Lucas Dubois","memberOf":"FC Fulbert","url":"https://tonsite.example/equipe.html#lucas-dubois","jobTitle":"Avant-centre"},
-      {"@type":"Person","name":"Nathan Rousseau","memberOf":"FC Fulbert","url":"https://tonsite.example/equipe.html#nathan-rousseau","jobTitle":"Ailier droit"},
-      {"@type":"Person","name":"Romain Garcia","memberOf":"FC Fulbert","url":"https://tonsite.example/equipe.html#romain-garcia","jobTitle":"Ailier gauche"}
+      {"@type":"Person","name":"Antoine Bernard","memberOf":"FC Fulbert","url":"https://samsweyyy.github.io/FC__Fulbert/equipe.html#antoine-bernard","jobTitle":"Gardien de but"},
+      {"@type":"Person","name":"Jules Moreau","memberOf":"FC Fulbert","url":"https://samsweyyy.github.io/FC__Fulbert/equipe.html#jules-moreau","jobTitle":"Gardien de but"},
+      {"@type":"Person","name":"Alex Durand","memberOf":"FC Fulbert","url":"https://samsweyyy.github.io/FC__Fulbert/equipe.html#alex-durand","jobTitle":"Défenseur central"},
+      {"@type":"Person","name":"Pierre Moreau","memberOf":"FC Fulbert","url":"https://samsweyyy.github.io/FC__Fulbert/equipe.html#pierre-moreau","jobTitle":"Défenseur central"},
+      {"@type":"Person","name":"Kevin Leroy","memberOf":"FC Fulbert","url":"https://samsweyyy.github.io/FC__Fulbert/equipe.html#kevin-leroy","jobTitle":"Arrière gauche"},
+      {"@type":"Person","name":"Thomas Martin","memberOf":"FC Fulbert","url":"https://samsweyyy.github.io/FC__Fulbert/equipe.html#thomas-martin","jobTitle":"Milieu central"},
+      {"@type":"Person","name":"Maxime Petit","memberOf":"FC Fulbert","url":"https://samsweyyy.github.io/FC__Fulbert/equipe.html#maxime-petit","jobTitle":"Milieu offensif"},
+      {"@type":"Person","name":"Hugo Lambert","memberOf":"FC Fulbert","url":"https://samsweyyy.github.io/FC__Fulbert/equipe.html#hugo-lambert","jobTitle":"Milieu défensif"},
+      {"@type":"Person","name":"Lucas Dubois","memberOf":"FC Fulbert","url":"https://samsweyyy.github.io/FC__Fulbert/equipe.html#lucas-dubois","jobTitle":"Avant-centre"},
+      {"@type":"Person","name":"Nathan Rousseau","memberOf":"FC Fulbert","url":"https://samsweyyy.github.io/FC__Fulbert/equipe.html#nathan-rousseau","jobTitle":"Ailier droit"},
+      {"@type":"Person","name":"Romain Garcia","memberOf":"FC Fulbert","url":"https://samsweyyy.github.io/FC__Fulbert/equipe.html#romain-garcia","jobTitle":"Ailier gauche"}
     ]
   }
   </script>
@@ -94,6 +110,9 @@
   </script>
 </head>
 <body>
+  <!-- Lien d'évitement -->
+  <a href="#contenu" class="visually-hidden-focusable">Aller au contenu</a>
+
   <!-- Header / Nav -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top" role="navigation" aria-label="Navigation principale">
@@ -143,7 +162,7 @@
         <div class="row justify-content-center">
           <div class="col-md-4 mb-4">
             <article class="staff-card" itemscope itemtype="https://schema.org/Person">
-              <div class="staff-avatar" aria-hidden="true"><i class="fas fa-user-tie"></i></div>
+              <div class="staff-avatar" aria-hidden="true"><i class="fas fa-user-tie" aria-hidden="true"></i></div>
               <h3 class="h5" itemprop="name">Marc Dubois</h3>
               <p class="text-muted mb-3" itemprop="jobTitle">Entraîneur principal</p>
               <p><small>Licence UEFA A – 8 ans d’expérience<br>Ancien joueur professionnel</small></p>
@@ -151,7 +170,7 @@
           </div>
           <div class="col-md-4 mb-4">
             <article class="staff-card" itemscope itemtype="https://schema.org/Person">
-              <div class="staff-avatar" aria-hidden="true"><i class="fas fa-clipboard-list"></i></div>
+              <div class="staff-avatar" aria-hidden="true"><i class="fas fa-clipboard-list" aria-hidden="true"></i></div>
               <h3 class="h5" itemprop="name">Sophie Martin</h3>
               <p class="text-muted mb-3" itemprop="jobTitle">Entraîneur adjoint</p>
               <p><small>Licence UEFA B – Préparation physique<br>Formation CREPS</small></p>
@@ -169,7 +188,7 @@
           <div class="col-md-6 mb-4">
             <article class="player-card" id="antoine-bernard" itemscope itemtype="https://schema.org/Person">
               <div class="player-avatar" aria-hidden="true">
-                <div class="player-number">1</div><i class="fas fa-hand-paper"></i>
+                <div class="player-number">1</div><i class="fas fa-hand-paper" aria-hidden="true"></i>
               </div>
               <h3 class="h5" itemprop="name">Antoine Bernard</h3>
               <div class="position-badge">Gardien titulaire</div>
@@ -186,7 +205,7 @@
           <div class="col-md-6 mb-4">
             <article class="player-card" id="jules-moreau" itemscope itemtype="https://schema.org/Person">
               <div class="player-avatar" aria-hidden="true">
-                <div class="player-number">16</div><i class="fas fa-hand-paper"></i>
+                <div class="player-number">16</div><i class="fas fa-hand-paper" aria-hidden="true"></i>
               </div>
               <h3 class="h5" itemprop="name">Jules Moreau</h3>
               <div class="position-badge">Gardien remplaçant</div>
@@ -212,7 +231,7 @@
           <div class="col-md-4 mb-4">
             <article class="player-card" id="alex-durand" itemscope itemtype="https://schema.org/Person">
               <div class="player-avatar" aria-hidden="true">
-                <div class="player-number">4</div><i class="fas fa-shield-alt"></i>
+                <div class="player-number">4</div><i class="fas fa-shield-alt" aria-hidden="true"></i>
               </div>
               <h3 class="h5" itemprop="name">Alex Durand</h3>
               <div class="position-badge">Défenseur central</div>
@@ -228,7 +247,7 @@
           <div class="col-md-4 mb-4">
             <article class="player-card" id="pierre-moreau" itemscope itemtype="https://schema.org/Person">
               <div class="player-avatar" aria-hidden="true">
-                <div class="player-number">2</div><i class="fas fa-shield-alt"></i>
+                <div class="player-number">2</div><i class="fas fa-shield-alt" aria-hidden="true"></i>
               </div>
               <h3 class="h5" itemprop="name">Pierre Moreau</h3>
               <div class="position-badge">Défenseur central</div>
@@ -244,7 +263,7 @@
           <div class="col-md-4 mb-4">
             <article class="player-card" id="kevin-leroy" itemscope itemtype="https://schema.org/Person">
               <div class="player-avatar" aria-hidden="true">
-                <div class="player-number">3</div><i class="fas fa-shield-alt"></i>
+                <div class="player-number">3</div><i class="fas fa-shield-alt" aria-hidden="true"></i>
               </div>
               <h3 class="h5" itemprop="name">Kevin Leroy</h3>
               <div class="position-badge">Arrière gauche</div>
@@ -269,7 +288,7 @@
           <div class="col-md-4 mb-4">
             <article class="player-card" id="thomas-martin" itemscope itemtype="https://schema.org/Person">
               <div class="player-avatar" aria-hidden="true">
-                <div class="player-number">6</div><i class="fas fa-running"></i>
+                <div class="player-number">6</div><i class="fas fa-running" aria-hidden="true"></i>
               </div>
               <h3 class="h5" itemprop="name">Thomas Martin</h3>
               <div class="position-badge">Capitaine – Milieu central</div>
@@ -286,7 +305,7 @@
           <div class="col-md-4 mb-4">
             <article class="player-card" id="maxime-petit" itemscope itemtype="https://schema.org/Person">
               <div class="player-avatar" aria-hidden="true">
-                <div class="player-number">8</div><i class="fas fa-running"></i>
+                <div class="player-number">8</div><i class="fas fa-running" aria-hidden="true"></i>
               </div>
               <h3 class="h5" itemprop="name">Maxime Petit</h3>
               <div class="position-badge">Milieu offensif</div>
@@ -303,7 +322,7 @@
           <div class="col-md-4 mb-4">
             <article class="player-card" id="hugo-lambert" itemscope itemtype="https://schema.org/Person">
               <div class="player-avatar" aria-hidden="true">
-                <div class="player-number">10</div><i class="fas fa-running"></i>
+                <div class="player-number">10</div><i class="fas fa-running" aria-hidden="true"></i>
               </div>
               <h3 class="h5" itemprop="name">Hugo Lambert</h3>
               <div class="position-badge">Milieu défensif</div>
@@ -329,7 +348,7 @@
           <div class="col-md-4 mb-4">
             <article class="player-card" id="lucas-dubois" itemscope itemtype="https://schema.org/Person">
               <div class="player-avatar" aria-hidden="true">
-                <div class="player-number">9</div><i class="fas fa-futbol"></i>
+                <div class="player-number">9</div><i class="fas fa-futbol" aria-hidden="true"></i>
               </div>
               <h3 class="h5" itemprop="name">Lucas Dubois</h3>
               <div class="position-badge">Avant-centre</div>
@@ -346,7 +365,7 @@
           <div class="col-md-4 mb-4">
             <article class="player-card" id="nathan-rousseau" itemscope itemtype="https://schema.org/Person">
               <div class="player-avatar" aria-hidden="true">
-                <div class="player-number">11</div><i class="fas fa-futbol"></i>
+                <div class="player-number">11</div><i class="fas fa-futbol" aria-hidden="true"></i>
               </div>
               <h3 class="h5" itemprop="name">Nathan Rousseau</h3>
               <div class="position-badge">Ailier droit</div>
@@ -363,7 +382,7 @@
           <div class="col-md-4 mb-4">
             <article class="player-card" id="romain-garcia" itemscope itemtype="https://schema.org/Person">
               <div class="player-avatar" aria-hidden="true">
-                <div class="player-number">7</div><i class="fas fa-futbol"></i>
+                <div class="player-number">7</div><i class="fas fa-futbol" aria-hidden="true"></i>
               </div>
               <h3 class="h5" itemprop="name">Romain Garcia</h3>
               <div class="position-badge">Ailier gauche</div>
@@ -390,9 +409,9 @@
           <h5>FC Fulbert</h5>
           <p>Le club de football qui porte haut les couleurs de notre établissement depuis 2025.</p>
           <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
           </div>
         </div>
         <div class="col-lg-6 text-lg-end">
@@ -405,13 +424,22 @@
   </footer>
 
   <!-- JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   <script>
     // Apparition douce au scroll
     const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}})},{threshold:.1,rootMargin:'0px 0px -50px 0px'});
     document.querySelectorAll('.player-card,.staff-card').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity .6s ease, transform .6s ease';obs.observe(el);});
-    // Navbar
+
+    // Navbar bg au scroll
     addEventListener('scroll',()=>{const n=document.querySelector('.navbar-custom');n.style.background=scrollY>50?'rgba(30,58,95,.98)':'rgba(30,58,95,.95)';});
+
+    // Sync aria-expanded du burger (accessibilité)
+    const toggler=document.querySelector('.navbar-toggler');
+    const target=document.getElementById('navbarNav');
+    if(toggler && target){
+      target.addEventListener('shown.bs.collapse',()=>toggler.setAttribute('aria-expanded','true'));
+      target.addEventListener('hidden.bs.collapse',()=>toggler.setAttribute('aria-expanded','false'));
+    }
   </script>
   <noscript>La liste des joueurs reste accessible sans JavaScript.</noscript>
 </body>
