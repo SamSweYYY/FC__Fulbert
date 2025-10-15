@@ -1,39 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<url>
-  <loc>https://samsweyyy.github.io/FC__Fulbert/</loc>
-  <lastmod>2025-10-14T09:09:38+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://samsweyyy.github.io/FC__Fulbert/index.html</loc>
-  <lastmod>2025-10-14T09:09:38+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://samsweyyy.github.io/FC__Fulbert/equipe.html</loc>
-  <lastmod>2025-10-14T09:09:38+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://samsweyyy.github.io/FC__Fulbert/matchs.html</loc>
-  <lastmod>2025-10-14T09:09:38+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://samsweyyy.github.io/FC__Fulbert/actualites.html</loc>
-  <lastmod>2025-10-14T09:09:38+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://samsweyyy.github.io/FC__Fulbert/contact.html</loc>
-  <lastmod>2025-10-14T09:09:38+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Page d'accueil (évite de dupliquer avec /index.html) -->
+  <url>
+    <loc>https://samsweyyy.github.io/FC__Fulbert/</loc>
+    <lastmod>2025-10-15</lastmod>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
 
+  <url>
+    <loc>https://samsweyyy.github.io/FC__Fulbert/actualites.html</loc>
+    <lastmod>2025-10-15</lastmod>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
 
+  <url>
+    <loc>https://samsweyyy.github.io/FC__Fulbert/equipe.html</loc>
+    <lastmod>2025-10-15</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://samsweyyy.github.io/FC__Fulbert/matchs.html</loc>
+    <lastmod>2025-10-15</lastmod>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://samsweyyy.github.io/FC__Fulbert/contact.html</loc>
+    <lastmod>2025-10-15</lastmod>
+    <priority>0.6</priority>
+    <changefreq>yearly</changefreq>
+  </url>
 </urlset>
